@@ -1,0 +1,48 @@
+﻿<Window x:Class="WPF_SAT_FOTOGRAPHY.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_SAT_FOTOGRAPHY"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="650" SizeToContent="Height">
+    <Grid>
+        <StackPanel x:Name="layout_stackPanel" Orientation="Vertical">
+            <GroupBox x:Name="addPerson_groupBox" Header="Add New Person" Margin="0">
+                <StackPanel Orientation="Vertical">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="NAME" TextAlignment="Center" Margin="8 4" Width="150"/>
+                            <TextBlock Text="1 NEIGHBOR" TextAlignment="Center" Margin="8 4"  Width="150"/>
+                            <TextBlock Text="2 NEIGHBOR" TextAlignment="Center" Margin="8 4"  Width="150"/>
+                        </StackPanel>
+                        <ScrollViewer HorizontalScrollBarVisibility="Auto" Height="200" MaxHeight="200">
+                            <StackPanel x:Name="addPerson_stackPanel" Orientation="Vertical">
+
+                            </StackPanel>
+                        </ScrollViewer>
+
+                        <Button x:Name="addPerson_button" Content="Add New Person" Margin="8 4" Click="addPerson_button_Click"/>
+                    </StackPanel>
+            </GroupBox>
+            <GroupBox x:Name="run_groupBox" Header="Run" Margin="0">
+                <StackPanel>
+                    <Button x:Name="run_button" Content="Run" Width="200" Click="run_button_Click"/>
+                </StackPanel>
+            </GroupBox>
+            <GroupBox x:Name="result_groupBox" Header="View Result" Margin="0">
+                <StackPanel Orientation="Vertical">
+                    <TextBlock x:Name="resultSatisfability_textBlock" 
+                               Margin="10" 
+                               FontWeight="Bold" 
+                               FontSize="16" 
+                               TextAlignment="Center">
+                    </TextBlock>
+                    <ScrollViewer HorizontalScrollBarVisibility="Hidden" MaxHeight="200">
+                        <ListBox x:Name="result_listBox" Width="200">
+                        </ListBox>
+                    </ScrollViewer>
+                </StackPanel>
+            </GroupBox>
+        </StackPanel>
+    </Grid>
+</Window>
